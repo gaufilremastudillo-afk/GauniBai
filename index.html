@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <main class="card-container">
+    <div class="glass-card">
+      
+      <!-- Top Action Controls (QR Only) -->
+      <div class="top-bar">
+        <button id="qrBtn" class="icon-btn" title="Show QR Code" aria-label="Show QR Code">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Profile Section -->
+      <header class="profile-header">
+        <div class="avatar-ring">
+          <img id="profileAvatar" src="images/pfp.jfif" alt="Profile Picture" class="avatar-img" onerror="this.src='https://ui-avatars.com/api/?name=User&background=6366f1&color=fff'">
+        </div>
+        <h1 id="profileName">Gaufilrem Astudillo</h1>
+        <p id="profileTitle" class="title">Developer & Creator</p>
+        <p id="profileBio" class="bio">Tap any button below to connect with me directly.</p>
+      </header>
+
+      <!-- Quick Action: Direct Call & Save Contact -->
+      <div class="action-buttons">
+        <button id="saveContactBtn" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          Save Contact
+        </button>
+        <a id="emailLink" href="mailto:your-email@example.com" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Email Me
+        </a>
+      </div>
+
+      <!-- Contact Platforms List -->
+      <nav class="links-list" aria-label="Direct contact links">
+        <!-- WhatsApp -->
+        <a id="linkWhatsapp" href="https://wa.me/639000000000" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-info">
+            <span class="link-icon whatsapp-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </span>
+            <span class="link-title">WhatsApp</span>
+          </div>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+
+        <!-- Instagram -->
+        <a id="linkInstagram" href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-info">
+            <span class="link-icon instagram-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </span>
+            <span class="link-title">Instagram</span>
+          </div>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+
+        <!-- Facebook -->
+        <a id="linkFacebook" href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" class="link-item">
+          <div class="link-info">
+            <span class="link-icon facebook-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </span>
+            <span class="link-title">Facebook</span>
+          </div>
+          <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </nav>
+
+      <footer class="footer-nfc">
+        <span class="nfc-pulse"></span> NFC Connected
+      </footer>
+    </div>
+  </main>
+
+  <!-- QR Modal for non-NFC phones -->
+  <div id="qrModal" class="modal-overlay hidden">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3>Share Card</h3>
+        <button id="closeQrBtn" class="close-btn">&times;</button>
+      </div>
+      <p class="modal-desc">Scan with camera if device doesn't support NFC</p>
+      <div class="qr-wrapper">
+        <img id="qrImage" src="" alt="Scan QR Code" class="qr-img">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
